@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "b889e488-638e-451f-9bd3-529139b82c3b",
+		"name": "medicine project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991728",
+		"_collection_link": "https://cloudy-resonance-772556.postman.co/workspace/food~6a23a2a8-ded9-4744-b06e-42b0744567ca/collection/29991728-b889e488-638e-451f-9bd3-529139b82c3b?action=share&source=collection_link&creator=29991728"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NTQ0MjAzMjQsImV4cCI6MTc1NDQyMzkyNH0.GEuRjjLaM1OJ1o9g2DJAbomNHdrYna6VkF1lu3oC8qk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prajakta\",\r\n    \"email\": \"prajakta@example.com\",\r\n    \"password\": \"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NTQ0MjAzMjQsImV4cCI6MTc1NDQyMzkyNH0.GEuRjjLaM1OJ1o9g2DJAbomNHdrYna6VkF1lu3oC8qk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"prajakta@example.com\",\r\n    \"password\": \"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add medicine",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzU0NTUwNTM1LCJleHAiOjE3NTQ1NTQxMzV9.Ei3kzJpWWLfaA9LCRghz680deGQbYeep2Ct_8eJGPgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Amoxicillin\",\r\n    \"brand\": \"Cipla\",\r\n    \"price\": \"20.75\",\r\n    \"stock_quantity\": \"100\"     \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/medicines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"medicines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get medicine",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzU0NTUwNTM1LCJleHAiOjE3NTQ1NTQxMzV9.Ei3kzJpWWLfaA9LCRghz680deGQbYeep2Ct_8eJGPgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Amoxicillin\",\r\n    \"brand\": \"Cipla\",\r\n    \"price\": \"20.75\",\r\n    \"stock_quantity\": \"100\"     \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/medicines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"medicines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update medicine",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbjEyM0BnbWFpbC5jb20iLCJpc19hZG1pbiI6MCwiaWF0IjoxNzU0NTUyMTU3LCJleHAiOjE3NTQ2Mzg1NTd9.E3ru3H1DBPrpLMdJuS3i5K1htlPPzdL5QCirsmzy3wI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"name\": \"pars\",\r\n            \"brand\": \"Ciwpla\",\r\n            \"price\": \"10.75\",\r\n            \"stock_quantity\": 100\r\n }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/medicines/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"medicines",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete medicine",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbjEyM0BnbWFpbC5jb20iLCJpc19hZG1pbiI6MCwiaWF0IjoxNzU0NTUyMTU3LCJleHAiOjE3NTQ2Mzg1NTd9.E3ru3H1DBPrpLMdJuS3i5K1htlPPzdL5QCirsmzy3wI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"name\": \"pars\",\r\n            \"brand\": \"Ciwpla\",\r\n            \"price\": \"10.75\",\r\n            \"stock_quantity\": 100\r\n }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/medicines/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"medicines",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbjEyM0BnbWFpbC5jb20iLCJpc19hZG1pbiI6MCwiaWF0IjoxNzU0NTUyMTU3LCJleHAiOjE3NTQ2Mzg1NTd9.E3ru3H1DBPrpLMdJuS3i5K1htlPPzdL5QCirsmzy3wI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"items\": [\r\n        {\"medicine_id\": 1,\"quantity\": 2}\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/place",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbjEyM0BnbWFpbC5jb20iLCJpc19hZG1pbiI6MCwiaWF0IjoxNzU0NTUyMTU3LCJleHAiOjE3NTQ2Mzg1NTd9.E3ru3H1DBPrpLMdJuS3i5K1htlPPzdL5QCirsmzy3wI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/orders/my-orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"my-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
